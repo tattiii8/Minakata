@@ -1,2 +1,0 @@
-# Minakata
-for api application

@@ -12,6 +12,10 @@ EXTERNAL_API_URL = "https://8tofhjnexd.execute-api.ap-northeast-1.amazonaws.com/
 def read_root():
     return {"Hello": "World"}
 
+@app.get("/fr")
+def read_root():
+    return {"Bonjour": "World"}
+
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Union[str, None] = None):

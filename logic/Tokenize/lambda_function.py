@@ -5,7 +5,7 @@ def tokenize(text):
     text = text.strip()
     
     # 2. アポストロフィの扱い（l'homme や d'accord を分ける）
-    text = re.sub(r"(\w)'(\w)", r"\1'\2", text)
+    text = re.sub(r"(\w+)([’'])(\w+)", r"\1\2 \3", text)
     
     # 3. 特殊なハイフンの扱い（aujourd'hui のような例）
     text = re.sub(r"(\w)-(\w)", r"\1 - \2", text)
